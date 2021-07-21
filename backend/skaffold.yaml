@@ -1,0 +1,14 @@
+apiVersion: skaffold/v2beta19
+kind: Config
+metadata:
+  name: backend-service
+build:
+  artifacts:
+  - image: backend-service
+    docker:
+      dockerfile: Dockerfile
+deploy:
+  kubectl:
+    manifests:
+    - k8/deployment.yaml    
+

@@ -1,0 +1,15 @@
+apiVersion: skaffold/v2beta12
+kind: Config
+metadata:
+  name: gateway-app-ecosystem
+build:
+  local:
+    concurrency: 0 #builds all artifacts in parallel
+requires:
+  - path: ./backend
+  - path: ./api-gateway
+deploy:
+  kubectl:
+    manifests:    
+    - ./api-gateway/k8/ingress.yaml
+    
