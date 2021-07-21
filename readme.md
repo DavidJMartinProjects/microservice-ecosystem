@@ -1,13 +1,11 @@
 
 WIP readme
 
-
-
 # Ecosystem Playground Design
 
-![alt text](./doc/design.png)
-
-This project will be used to incrementally build a fully fledged microservice ecosystem.
+<p align="center">
+  <img height="600" src="./doc/design.png">  
+</p>
 
 # How to Deploy:
 
@@ -22,3 +20,4 @@ skaffold run
 ```
 
 
+This project will be used to incrementally build a fully fledged microservice ecosystem.
