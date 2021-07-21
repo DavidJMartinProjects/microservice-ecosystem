@@ -4,7 +4,7 @@ WIP readme
 # Ecosystem Playground Design
 
 <p align="center">
-  <img height="600" src="./doc/design.png">  
+  <img src="./doc/design.png">  
 </p>
 
 # How to Deploy:
