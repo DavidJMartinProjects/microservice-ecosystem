@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment 
+metadata:
+   name: angular-service
+   namespace: default 
+spec:
+   selector:
+      matchLabels:
+         app: angular-service
+   replicas: 1 
+   template:
+      metadata:
+         name: angular-service
+         labels:
+            app: angular-service 
+      spec:
+         containers:
+            - name: angular-service
+              image: 'angular-service'
+--- 
+apiVersion: v1
+kind: Service 
+metadata:
+  name: angular-service
+  labels:
+    app: angular-service 
+spec:
+  type: NodePort
+  ports:
+   - port: 3000 
+  selector:
+   app: angular-service

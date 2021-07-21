@@ -1,0 +1,13 @@
+apiVersion: skaffold/v2beta19
+kind: Config
+metadata:
+  name: frontend
+build:
+  artifacts:
+  - image: angular-service
+    docker:
+      dockerfile: Dockerfile
+deploy:
+  kubectl:
+    manifests:
+    - k8/frontend.deployment.yaml
