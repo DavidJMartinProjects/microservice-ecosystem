@@ -1,0 +1,18 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: order-service
+spec:
+  hosts:
+    - "*"
+  gateways:
+    - order-app-gateway
+  http:
+    - match:
+        - uri:
+            prefix: /orders
+      route:
+        - destination:
+            host: order-service
+            port:
+              number: 9000
